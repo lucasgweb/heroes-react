@@ -5,13 +5,18 @@ export const Container = styled.div`
   border-radius: 20px;
   padding: 10px;
   align-items: center;
-  background-color: ${(props) => props.theme['gray-800']};
+  background-color: ${(props) => props.theme['gray-900']};
   justify-content: space-between;
 
   @media screen and (min-width: 768px) {
     padding: 20px;
   }
-`;
+
+  @media screen and (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    
+  }`;
 
 export const HeaderContainer = styled.header`
   padding: 10px;
@@ -20,6 +25,13 @@ export const HeaderContainer = styled.header`
 
   @media screen and (min-width: 768px) {
     padding: 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-self: center;
   }
 `;
 
@@ -30,6 +42,11 @@ export const Title = styled.h1`
   @media screen and (min-width: 768px) {
     font-size: 2.5rem;
   }
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `;
 
 export const TitleLink = styled.a`
@@ -39,6 +56,10 @@ export const TitleLink = styled.a`
 
 export const Navigation = styled.nav`
   color: ${(props) => props.theme.white};
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -49,17 +70,20 @@ export const NavList = styled.ul`
   @media screen and (min-width: 768px) {
     gap: 20px;
   }
+
+  @media screen and (max-width: 400px) {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-self: center;
+    @media screen and (max-width: 400px) {
+    gap: 20px;
+  }
+  }
 `;
 
 export const NavItem = styled.li`
   font-weight: 500;
   cursor: pointer;
-`;
-
-export const NavLink = styled.a`
-  text-decoration: none;
-  align-items: center;
-  display: flex;
-  gap: 3px;
-  color: ${(props) => props.theme.white};
 `;

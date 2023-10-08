@@ -1,24 +1,26 @@
-import { HeartStraight, House  } from "@phosphor-icons/react";
 
-import { Navigation, HeaderContainer, Title, NavList, NavItem, NavLink, TitleLink, Container } from "./styles";
+import { NavLink } from "react-router-dom";
+
+import { Navigation, HeaderContainer, Title, NavList, NavItem, TitleLink, Container } from "./styles";
 
 export function Header() {
     return (
         <HeaderContainer>
             <Container>
             <Title>
-                <TitleLink href="/">Heroes</TitleLink>
+                <TitleLink>
+                    <NavLink style={{textDecoration: 'none', color: 'white' }}  to='/'>Heroes</NavLink></TitleLink>
             </Title>
             <Navigation>
                 <NavList>
                 <NavItem>
-                        <NavLink href="/">
-                            Inicio <House weight="fill" />
+                        <NavLink to="/" style={{textDecoration: 'none', color: 'white', margin: 10 }} >
+                            Inicio
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/favorites">
-                            Favoritos <HeartStraight weight="fill" />
+                        <NavLink style={{textDecoration: 'none', color: 'white', margin: 10 }} to="/favorites">
+                            Favoritos
                         </NavLink>
                     </NavItem>
                 </NavList>

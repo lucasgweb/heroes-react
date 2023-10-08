@@ -8,6 +8,7 @@ display: flex;
 flex-direction: column;
 border-radius: 7px;
 margin-bottom: 20px;
+
 `
 
 export const HeroTitleContainer = styled.div`

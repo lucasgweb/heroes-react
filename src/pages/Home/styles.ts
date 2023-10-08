@@ -37,7 +37,7 @@ justify-content: center;
 export const PaginationButton = styled.button`
 background-color: ${props => props.theme['gray-700']};
 border: 0;
-border-radius: 4px;
+border-radius: 10px;
 padding: 10px;
 cursor: pointer;
 color: ${props => props.theme['gray-100']};
